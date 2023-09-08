@@ -1,0 +1,5 @@
+<h1>Liste des Mangas : </h1>
+
+<div *ngFor="let manga of mangaList;">
+    <a routerLink="/liste/{{manga.id}}">{{manga.title}}</a>
+</div>

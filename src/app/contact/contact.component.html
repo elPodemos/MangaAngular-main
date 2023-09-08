@@ -1,0 +1,19 @@
+<h1>Contact</h1>
+
+<div class="container">
+
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <div class="mb-3">
+            <label for="inputName" class="form-label">Name</label>
+            <input name="name" type="text" class="form-control" id="inputName" ngModel required>
+            <p>{{emojiName}}</p>
+        </div>
+        <div class="mb-3">
+            <label for="inputPwd" class="form-label">Password</label>
+            <input name="pwd" type="password" class="form-control" id="inputPwd" ngModel required>
+            <p>{{emojiPwd}}</p>
+        </div>
+
+        <button [disabled]="!contactForm.valid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

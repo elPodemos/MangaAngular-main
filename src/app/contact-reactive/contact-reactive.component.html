@@ -1,0 +1,26 @@
+<h1>Contact Reactive</h1>
+
+<div class="container">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Title</label>
+            <input formControlName="title" type="text" class="form-control" id="title" ngModel required>
+        </div>
+        <div class="mb-3">
+            <label for="author" class="form-label">Author</label>
+            <input formControlName="author" type="text" class="form-control" id="author" ngModel required>
+        </div>
+        <div class="mb-3">
+            <label for="description" lass="form-label">Description</label>
+            <textarea formControlName="description" class="form-control" id="description" style="height: 100px" ngModel required>
+            </textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Lien Image</label>
+            <input formControlName="image" type="text" class="form-control" id="image" ngModel required>
+        </div>
+
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
+    </form>
+</div>
